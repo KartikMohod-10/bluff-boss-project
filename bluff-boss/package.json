@@ -1,0 +1,14 @@
+{
+  "name": "bluff-boss-multiplayer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BLUFF BOSS real-time multiplayer bluffing party game",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check public/client.js && node --check scripts/smoke-test.mjs",
+    "test:smoke": "node scripts/smoke-test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

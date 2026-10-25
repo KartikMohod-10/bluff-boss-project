@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#100d20" />
+  <meta name="description" content="BLUFF BOSS — fool your friends, catch their lies, and become the ultimate Bluff Boss." />
+  <title>BLUFF BOSS — Party Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Bluff Boss home" id="brand-home">
+      <span class="brand-mark"><span>BB</span><i>✦</i></span>
+      <span class="brand-name">BLUFF<span>BOSS</span></span>
+    </a>
+    <div class="topbar-right">
+      <span class="live-pill"><span class="live-dot"></span> REAL-TIME PARTY</span>
+      <button class="icon-button hidden" id="leave-top" title="Leave room" aria-label="Leave room">↗</button>
+    </div>
+  </header>
+
+  <main id="app" class="app-shell">
+    <section id="home-screen" class="home-screen">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR FRIENDS ARE NOT READY</div>
+        <h1>Trust no one.<br><span>Especially</span> <em>yourself.</em></h1>
+        <p class="hero-subtitle">Drop a believable lie. Catch a ridiculous bluff. Make your group chat history.</p>
+        <div class="hero-tags"><span>2–8 players</span><b>·</b><span>8 rounds</span><b>·</b><span>Zero downloads</span></div>
+      </div>
+      <div class="home-card glass-card">
+        <div class="card-heading"><span class="tiny-icon">✳</span><div><h2>Ready to bluff?</h2><p>Pick a name. Get your crew.</p></div></div>
+        <label for="player-name">YOUR PLAYER NAME</label>
+        <input id="player-name" maxlength="18" placeholder="e.g. Captain Suspicious" autocomplete="nickname" />
+        <button class="button button-primary button-full" id="create-room"><span>✦</span> Create a room <span class="button-arrow">↗</span></button>
+        <div class="split-label"><span></span><small>OR JOIN YOUR CREW</small><span></span></div>
+        <label for="room-code">ROOM CODE</label>
+        <div class="join-row"><input id="room-code" maxlength="5" placeholder="ABCDE" autocomplete="off" class="code-input" /><button class="button button-light" id="join-room">Join room <span>→</span></button></div>
+        <p class="microcopy"><span>🔒</span> Private answers. Shared chaos. No account needed.</p>
+      </div>
+      <div class="hero-bottom"><span class="orbit orbit-1">✦</span><div class="mini-stat"><strong>01</strong><span>Fool your friends</span></div><div class="mini-stat"><strong>02</strong><span>Spot the lies</span></div><div class="mini-stat"><strong>03</strong><span>Rule the room</span></div><span class="orbit orbit-2">✳</span></div>
+    </section>
+
+    <section id="room-screen" class="room-screen hidden"></section>
+    <section id="game-screen" class="game-screen hidden"></section>
+  </main>
+
+  <footer class="footer"><span>BLUFF BOSS <span class="footer-dot">✦</span> A game of questionable honesty</span><span>Built for the group chat generation.</span></footer>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script src="/client.js"></script>
+</body>
+</html>
